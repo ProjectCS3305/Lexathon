@@ -27,7 +27,7 @@ correctWordsPointerArray:
 totalPossibleWords:
 	.word 0
 filename:
-	.asciiz "wordbank(4-9).txt"
+	.asciiz "wordbank_temp.txt"
 letterArray:
 	.align 0
 	.space 9

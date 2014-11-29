@@ -20,17 +20,3 @@ jr $ra
 
 ####################################################################
 #get length of library
-getLength:
-	add $t0, $a0, $zero
-	li $t1, 0
-getLengthLoop:	
-	lb $t2, ($t0) #crashes here
-	beq $t2, 0, getLengthReturn
-	add $t1, $t1, 1 #advance counter
-	add $t0, $t0, 1 #advance scanner
-j getLengthLoop
-getLengthReturn:
-	move $v1, $t1
-j getLengthBack
-
-####################################################################
